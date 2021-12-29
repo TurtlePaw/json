@@ -9,7 +9,6 @@ function millisToMinutesAndSeconds(millis) {
 const Config = module.exports = {
     name: "generate",
     description: "Re-generates the emoji JSON pages.",
-    devOnly: true,
     /**
      * 
      * @param {Discord.CommandInteraction} interaction 
@@ -38,7 +37,6 @@ const Config = module.exports = {
                             ]
                         }
                     ],
-                    ephemeral: true
                 })
             } else {
                 await interaction.reply({
@@ -59,7 +57,6 @@ const Config = module.exports = {
                             ]
                         }
                     ],
-                    ephemeral: true
                 })
             }
         })
