@@ -11,7 +11,7 @@ const ClientBuilder = new jsh.Client({
     testGuildID: guildID
 });
 
-ClientBuilder.setCommandsDir("./js/commands");
+ClientBuilder.setCommandsDir("./commands");
 const Client = ClientBuilder.create({
     intents: ["GUILDS"]
 });
@@ -31,11 +31,11 @@ function Emojify(list){
 }
 Client.on("generate", async (execute) => {
     try{
-        await fs.writeFileSync("./1.md", `# 1: Random Emojis\n\`\`\`json\n${Emojify(await (await Client.guilds.cache.get("863457284456972298").emojis.fetch()).map(e => parseEmoji(e)).join(",\n"))}\n\`\`\``);
-        await fs.writeFileSync("./2.md", `# 2: [Remix Icons](https://remixicon.com/)\n\`\`\`json\n${Emojify(await (await Client.guilds.cache.get("870893923684466708").emojis.fetch()).map(e => parseEmoji(e)).join(",\n"))}\n\`\`\``);
-        await fs.writeFileSync("./3.md", `# 3: [Discord App](https://discord.com/app)\n\`\`\`json\n${Emojify(await (await Client.guilds.cache.get("887143380990185512").emojis.fetch()).map(e => parseEmoji(e)).join(",\n"))}\n\`\`\``);
+        await fs.writeFileSync("../1.md", `# 1: Random Emojis\n\`\`\`json\n${Emojify(await (await Client.guilds.cache.get("863457284456972298").emojis.fetch()).map(e => parseEmoji(e)).join(",\n"))}\n\`\`\``);
+        await fs.writeFileSync("../2.md", `# 2: [Remix Icons](https://remixicon.com/)\n\`\`\`json\n${Emojify(await (await Client.guilds.cache.get("870893923684466708").emojis.fetch()).map(e => parseEmoji(e)).join(",\n"))}\n\`\`\``);
+        await fs.writeFileSync("../3.md", `# 3: [Discord App](https://discord.com/app)\n\`\`\`json\n${Emojify(await (await Client.guilds.cache.get("887143380990185512").emojis.fetch()).map(e => parseEmoji(e)).join(",\n"))}\n\`\`\``);
         await fs.writeFileSync("./4.md", `# 4: Misc\n\`\`\`json\n${Emojify(await (await Client.guilds.cache.get("917201080268488796").emojis.fetch()).map(e => parseEmoji(e)).join(",\n"))}\n\`\`\``);
-        await fs.writeFileSync("./slashr.md", `# 5: Slashr Emojis ([Website/Dashboard](https://slashr.xyz/) & [Bot](https://slashr.xyz/invite)\n\`\`\`json\n${Emojify(await (await Client.guilds.cache.get("888151815869313024").emojis.fetch()).map(e => parseEmoji(e)).join(",\n"))}\n\`\`\``);
+        await fs.writeFileSync("../slashr.md", `# 5: Slashr Emojis ([Website/Dashboard](https://slashr.xyz/) & [Bot](https://slashr.xyz/invite)\n\`\`\`json\n${Emojify(await (await Client.guilds.cache.get("888151815869313024").emojis.fetch()).map(e => parseEmoji(e)).join(",\n"))}\n\`\`\``);
         execute(true)
         await Github.commit("Build Pages (Auto)")
         await Github.push("origin", "master");
