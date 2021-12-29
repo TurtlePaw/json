@@ -39,7 +39,7 @@ Client.on("generate", async (execute) => {
         execute(true)
         await Github.commit("Build Pages (Auto)")
         await Github.push("origin", "master");
-        console.log("Push to github");
+        console.log("Push to github complete");
     } catch(e){
         console.log(e)
         execute(false)
