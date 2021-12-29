@@ -1,0 +1,25 @@
+{
+  "name": "json",
+  "version": "1.0.0",
+  "description": "<center><img src=\"/Assets/json_banner.svg\"></center>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TurtlePaw/json.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TurtlePaw/json/issues"
+  },
+  "homepage": "https://github.com/TurtlePaw/json#readme",
+  "dependencies": {
+    "discord.js": "^13.4.0",
+    "discordjsh": "^2.0.4",
+    "simple-git": "^2.48.0"
+  }
+}
