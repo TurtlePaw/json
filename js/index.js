@@ -11,7 +11,7 @@ const ClientBuilder = new jsh.Client({
     testGuildID: guildID
 });
 
-ClientBuilder.setCommandsDir("./commands");
+ClientBuilder.setCommandsDir("./js/commands");
 const Client = ClientBuilder.create({
     intents: ["GUILDS"]
 });
